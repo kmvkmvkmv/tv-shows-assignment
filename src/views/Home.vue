@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="dark-background">
+    <homepage-carousel />
+    <categorywise-list />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HomepageCarousel from "@/components/home-components/HomepageCarousel.vue";
+import CategorywiseList from "@/components/home-components/CategorywiseList";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    CategorywiseList,
+    HomepageCarousel
+  },
+  data: () => ({
+    //
+  })
+};
 </script>
+<style scoped>
+.dark-background {
+  background-color: #1e1e1e;
+}
+</style>
